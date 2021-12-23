@@ -1,0 +1,58 @@
+#include<iostream>
+#include<string>
+#include<fstream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int mobilenumber;
+	int pin = 0; string first, Last; char pass[4];
+	int idcard;
+	char idnum;
+	int idno;
+	int i = 0;
+	int mobilenumber[11];
+
+	int ch;
+	cout << "Enter Your first Name : "; cin >> first;
+	cout << "Enter Last Name : "; cin >> Last;
+	cout << "Enter Your Mobile Number : "; 
+
+	cin.ignore();
+	cout << "Enter your ID Card number"; 
+	cin >> idcard;
+	
+aa:
+	cout << "Please Enter Your Pin : ";
+	cin >> pin;
+	for (int i = 0; i < 4; i++)
+	{
+		ch = _getch();
+		if ((ch >= 48) && (ch <= 57))
+		{
+			pass[i] = ch;
+			cout << "*";
+		}
+		else
+		{
+			cout << "Invalid Pin! Please Try Again. **Pin Should be Integer**\n";
+		}
+	}
+	cout << "\nConfirm Your Pin : "; char con[4];
+	for (int i = 0; i < 4; i++)
+	{
+		ch = _getch();
+		con[i] = ch;
+		if (con[i] == pass[i])
+		{
+			cout << "*";
+			continue;
+		}
+		else
+		{
+			cout << "Invalid Password. Please Try Again.\n";
+			goto aa;
+		}
+	}
+
+}

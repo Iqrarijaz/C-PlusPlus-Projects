@@ -1,0 +1,47 @@
+
+Code for inverse triangle in for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+	system("cls");
+	system("color fc");
+for (int i = 0; i <5 ; i++)
+	{
+		for (int k = 0; k<i; k++)
+		{
+			cout << " ";
+		}
+		for (int j = 5; j > i; j--)
+		{
+			if (i < j)
+				cout << "*";
+		}cout << endl;
+
+		//cout << " ";
+	}
+	system("pause");
+}
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	system("cls");
+	system("color f3");
+int a, b;
+cin >> a >> b;
+for (int i = 0; i < a; i++)
+{
+	for (int j = 0; j < b; j++)
+	{
+		if (j < i)
+			cout << " ";
+		else
+			cout << "*";
+	}
+	cout << endl;
+}
+	system("pause");
+}

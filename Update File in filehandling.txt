@@ -1,0 +1,19 @@
+
+//Program:
+#include<iostream>
+#include<conio.h>
+#include<string>
+#include<fstream>
+using namespace std;
+int main()
+{
+	system("cls");
+	system("color f3");
+	ofstream file;
+	file.open("malik.txt",ios::app);
+	file << "People let u down ,Allah Almighty never does ! "<<endl;
+	file << "you r made to be mine ?"<<endl;
+	file.close();
+	//ofstream outfile("malik.txt", ios::app);
+	system("pause");
+}

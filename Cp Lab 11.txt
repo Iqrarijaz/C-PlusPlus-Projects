@@ -1,0 +1,98 @@
+#include<iostream>
+#include<conio.h>
+#include<string>
+#include<fstream>
+using namespace std;
+int main()
+{
+	system("cls");
+	system("color f3");
+	double num1, num2;
+	int num;
+	//double  sum = 0,
+	ofstream file;
+	ofstream outfile("malik.txt", ios::app);
+	ofstream number("number.txt");
+	ifstream readNum("number.txt");
+	float sum, pro, div;
+	//int  pro;
+	string str;
+	int opt;
+	char op = 'y';
+	while (op == 'y'||op =='Y')
+	{
+		cout << "select option ";
+		cout << "press 1 for sum" << endl;
+		cout << "press 2 for multiplication" << endl;
+		cout << "press 3 for division" << endl;
+		cin >> opt;
+		cout << "enter your num1";
+		cin >> num1;
+		cout << "enter num2";
+		cin >> num2;
+		if (opt == 1)
+		{
+			sum = num1 + num2;
+			cout << "sum of " << num1 << "  &" << num2 << "is =" << sum;
+		}
+		else if (opt == 2)
+		{
+			pro = num1*num2;
+			cout << "product of " << num1 << "  &" << num2 << "is =" << pro;
+		}
+		else if (opt == 3)
+
+		{
+			div = num1 / num2;
+			cout << "division of " << num1 << "&  " << num2 << "is =" << div;
+		}
+
+		
+		if (opt == 1)
+		{
+			while (!readNum.eof())
+			{
+				readNum >> str;
+				int num = stoi(str);
+			}
+	
+			outfile << num << ":sum of " << num1 << "and " << num2 << "is= " << sum << endl;
+			num++;
+			number << num;
+
+		}
+		else if (opt == 2)
+		{
+			while (!readNum.eof())
+			{
+				readNum >> str;
+				int num = stoi(str);
+			}
+		
+			outfile << num << ":product  of " << num1 << "and " << num2 << "is =" << pro << endl;
+			num++;
+			number << num;
+		}
+		else if (opt == 3)
+		{
+			while (!readNum.eof())
+			{
+				readNum >> str;
+				int num = stoi(str);
+			}
+			
+			outfile << num << ":division  of " << num1 << "and " << num2 << "is =" << div << endl;
+			num++;
+			number << num;
+		}
+		cout << "Press y to continue";
+		cin >> op;
+}
+	outfile.close();
+	readNum.close();
+	number.close();
+	system("pause");
+	return 0;
+
+}
+

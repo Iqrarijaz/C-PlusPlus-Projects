@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+void disp(int array[], int size);
+void main()
+{
+	int a[5] = { 10, 20, 30, 40, 50 };
+	int b[4] = { 60, 70, 80, 90 };
+	cout << "a array :";
+	disp(a, 5);
+	cout << "b array :";
+	disp(b, 4);
+	system("pause");
+
+}
+void disp(int array[], int size)
+{
+	for (int i = 0; i < size; i++)
+		cout << "  "<<array[i];
+}

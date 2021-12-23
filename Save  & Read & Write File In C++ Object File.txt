@@ -1,0 +1,17 @@
+How to save file in C++.
+Program:
+#include<iostream>
+#include<conio.h>
+#include<string>
+#include<fstream>
+using namespace std;
+int main()
+{
+	system("cls");
+	system("color f3");
+	ofstream file;
+	file.open("malik.txt");
+	file << "people let u down , Allah never does !";
+	file.close();
+	system("pause");
+}

@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class Teacher
+{
+	public:
+		Teacher()
+		{
+		cout<<"in class t"<<endl;
+		}
+		void show()
+	  
+	  {
+	  	cout<<endl<<"your in class "<<endl;
+	  }
+};
+class Student
+{
+  public:
+  	Student()
+  	
+  	{
+  	cout<<"in class s"<<endl;
+	  }
+	  void show()
+	  
+	  {
+	  	cout<<endl<<"your in class s"<<endl;
+	  }
+};
+class Person:Teacher,Student
+{
+public:
+  	Person()
+  	
+  	{
+  	cout<<"in class P"<<endl;
+	  }
+	  
+};
+int main()
+{
+	Person s;
+	return 0;
+}

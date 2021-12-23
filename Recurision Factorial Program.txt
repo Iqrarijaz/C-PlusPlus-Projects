@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int fact(int);
+int main()
+{
+	cout << "enter a positive number.";
+	int num;
+	cin >> num;
+	cout << "the fact of " << num << "!" << "is   :" << fact(num);
+	
+	system("pause");
+	return 0;
+}
+int fact(int n)
+{
+	if (n ==1)
+	
+		return 1;
+	else
+		return n*fact (n- 1);
+
+}

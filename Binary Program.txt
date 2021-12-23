@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+#include<conio.h>
+
+int main()
+{
+	int n;
+	int binary;
+	int bits = 0;
+	cout << "enter number:";
+	cin >> n;
+	if (n == 0)
+	{
+
+		cout << 0 << endl;
+	}
+	else
+		cout << "binary of agiven number is :";
+	{
+		while (n > 0)
+		{
+			binary= n % 2;
+			cout << binary;
+			n /= 2;
+
+		}
+	}
+	cout << endl;
+	system("pause");
+}

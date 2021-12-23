@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+double mean (int a[], int s);
+int main()
+{
+	int array[5] = { 10, 23, 22, 34, 13 };
+	mean(array,5);
+	system("pause");
+	return 0;
+}
+double mean(int a[],int n)
+{
+	double sum=0;
+	for (int i = 0; i < n; i++)	
+	sum = sum + a[i];
+	double  m = sum / n;
+	cout << "Mean of given array is : "<< m << endl;
+	return 0;
+}

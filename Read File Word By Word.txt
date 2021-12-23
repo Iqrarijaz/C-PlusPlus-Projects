@@ -1,0 +1,26 @@
+Print Line By Line.
+#include<iostream>
+#include<conio.h>
+#include<string>
+#include<fstream>
+using namespace std;
+int main()
+{
+	ofstream file;
+	file.open("malik.txt");
+	file << "people let u down , Allah never does !";
+	file.close();
+	ifstream file1("malik.txt");
+	string line;
+                      cout << endl;
+	cout << "Read word by word\n";
+	file1.clear();
+	file1.seekg(0, ios::beg);
+
+	while (!file1.eof())
+	{
+		file1 >> line;
+		cout << line << endl;
+	}
+	system("pause");
+}

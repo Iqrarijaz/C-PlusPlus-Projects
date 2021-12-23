@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+#include<conio.h>
+#include<string>
+int main()
+{
+	int  ch;
+	char pass[4];
+	int pin = 0;
+	cout << "Enter your pin : ";
+	for (int i = 0; i < 4; i++)
+	{
+		ch = _getch();
+		if ((ch >= 48) && (ch <= 57))
+		{
+			pass[i] = ch;
+			cout << "*";
+		}
+		else
+		{
+			cout << "Invalid Pin! Please Try Again. Pin Should be Integer\n";
+		}
+	}
+	cout << "\nConfirm Your Pin : "; char con[4];
+	for (int i = 0; i < 4; i++)
+	{
+		ch = _getch();
+		con[i] = ch;
+		if (con[i] == pass[i])
+		{
+			cout << "*";
+			continue;
+		}
+		else
+		{
+			cout << "Invalid Password. Please Try Again.\n";
+		}
+
+	}
+	system("pause");
+	return 0;
+}
+

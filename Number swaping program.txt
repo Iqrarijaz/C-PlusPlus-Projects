@@ -1,0 +1,23 @@
+//number swaping progrmm
+#include<iostream>
+using namespace std;
+void disp(int&, int&);
+int main()
+{
+	int num1, num2;
+	cin >> num1; 
+	cin >> num2;
+	if (num1 > num2){
+		swap(num1, num2);
+	}
+	cout << num1 << "   " << num2;
+	system("pause");
+}
+void disp(int &a, int &b)
+{
+	int temp;
+	temp = a;
+	a = b;
+	b = temp;
+	return;
+}

@@ -1,0 +1,15 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void main()
+{
+	int n;
+	int sum = 0;
+	do{
+		cin >> n;
+		sum = sum + n;
+	} while (n != 0);
+	cout << sum;
+
+	system("pause");
+}

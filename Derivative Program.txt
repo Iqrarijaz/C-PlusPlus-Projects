@@ -1,0 +1,150 @@
+#include<iostream>
+
+#include<conio.h>
+
+#include<cmath>
+
+#include<string>
+
+#include<cstdlib>
+
+#include<cstring>
+
+using namespace std;
+
+void main()
+
+{
+
+
+	double a, b, c, d, x1, x2, s, e, r, t;
+
+	double aa, bb, cc, dd, ss, ee, rr, tt,choice,chk;
+
+cout << "Press 1 For Derivation      :  Press 2 For Integration \n";
+
+	cout << "Enter your Choice =";
+	
+cin >> choice;
+	
+char x;
+
+	if (choice == 1)
+
+	{
+		
+cout << "quadratic formula in given by =" << "ax^s + bx^e + cx^r + dx^t";
+
+		cout << "Enter the value of a=";//where a is coefficent of x veriable
+
+		cin >> a;
+	
+	cout << "enter the value of s="; //where s is power of x veriable
+	
+	cin >> s;
+		
+cout << "enter the value of b=";//where a is coefficent of x veriable
+
+		cin >> b;
+		
+cout << "enter the value of e=";//where e is power of x veriable
+		
+cin >> e;
+
+		cout << "enter the value of c="; //where c is coefficent of x veriable
+		
+cin >> c;
+
+		cout << "enter the value of r=";//where r is power of x veriable
+
+		cin >> r;
+	
+	cout << "enter the value of d="; //where d  is coefficent of x veriable
+		
+cin >> d;
+		c
+out << "enter the value of t=";//where t is power of x veriable
+	
+	cin >> t;
+
+		cout << "the quadratic equation is" << a << "x^" << s << "+" << b << "x^" << e << "+" << c << "x^" << r << "+" << d << "x^" << t << endl;
+
+		cout << "x^2+" << b;
+	
+	cout << "x+" << c << endl;
+	
+	ss = s - 1;
+
+		ee = e - 1;
+
+		rr = r - r;
+
+		tt = t - t;
+		
+aa = s * a;
+
+		bb = e * b;
+
+		cc = r * c;
+		d
+d = t * d;
+
+
+		cout << endl << aa << "x^" << ss << "+" << bb << "x^" << ee << "+" << cc << "x^" << rr << "+" << dd << "x^" << tt << endl;
+	
+}
+
+
+	if (choice == 2)
+
+	{
+
+
+
+		cout << "Enter quadratic formula in order " << "\n" << "ax^s + bx^e + cx^r + dx^t";
+	
+	cout << "enter the value of a=";
+
+		cin >> a;
+	
+	cout << "enter the value of s=";
+		
+cin >> s;
+
+		cout << "enter the value of b=";
+
+		cin >> b;
+
+		cout << "enter the value of e=";
+		
+cin >> e;
+		cout << "enter the value of c=";
+		cin >> c;
+		cout << "enter the value of r=";
+		cin >> r;
+		cout << "enter the value of d=";
+		cin >> d;
+		cout << "enter the value of t=";
+		cin >> t;
+		cout << "the derivative of given equatio is =" << a << "x^" << s << "+" << b << "x^" << e << "+" << c << "x^" << r << "+" << d << "x^" << t << endl;
+
+
+		ss = s + 1;
+		ee = e + 1;
+		rr = r + r;
+		tt = t + t;
+		aa = s * a;
+		bb = e * b;
+		cc = r * c;
+		dd = t * d;
+
+		cout << endl << "(" << a << "x^" << ss << "/" << ss << ")+(" << b << "x^" << ee << "/" << ee << ")+(" << c << "x^" << rr << "/" << rr << ")+(" << d << "x^" << tt << "/" << t << ")" << endl;
+
+	}
+	else
+	{
+		cout << "invaild input";
+	}
+	system("pause");
+
+}

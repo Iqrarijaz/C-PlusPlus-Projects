@@ -1,0 +1,96 @@
+#include<iostream>
+using namespace std;
+typedef struct  node * ptr;
+struct node
+{
+	int data;
+	ptr left;
+	ptr right;
+};
+ptr newNode(int x)
+{
+	ptr node = new struct  node;
+	node->data = x;
+	node->left = NULL;
+	node->right = NULL;
+	return node;
+}
+ptr insertNode(ptr root, int data)
+{
+	if (root == NULL)
+	{
+		root = newNode(data);
+	}
+	else if (data <= root->data)
+	{
+		root->left = insertNode(root->left, data);
+	}
+	else if (data >= root->data)
+	{
+		root->right = insertNode(root->right, data);
+	}
+	return root;
+}
+bool search(ptr root, int data)
+{
+	if (root == NULL)
+	{
+		return false;
+	}
+	else if (data == root->data)
+	{
+		return true;
+	}
+	else if (data <= root->data)
+		return search(root->left, data);
+	else if (data >= root->data)
+		return search(root->right, data);
+}
+void inorder(struct node* root)
+{
+	if (root != NULL)
+	{
+		inorder(root->left);
+		cout << root->data;
+		cout << "     ";
+		inorder(root->right);
+	}
+}
+void preOrder(ptr root)
+{
+	if (root != NULL)
+	{
+		cout<<root->data<< "     ";
+		preOrder (root->left);
+		preOrder(root->right);
+	}
+}
+void postOrder(ptr root)
+{
+	if (root != NULL)
+	{
+		postOrder(root->left);
+		postOrder(root->right);
+		cout << root->data<< "     ";
+	}
+}
+int main()
+{
+	int number;
+	ptr root = NULL;
+	root = insertNode(root, 5); root = insertNode(root, 10); root = insertNode(root, 2); root = insertNode(root, 8);
+	/*cout << "Enter number you want to chk";
+	cin >> number;
+	if (search(root, number) == true)
+		cout << "found ";
+	else
+		cout << "not found"; */
+	cout << endl << "Inorder     :";
+	inorder(root);
+	cout << endl << "Preorder    :";
+	preOrder(root);
+	cout << endl << "Postorder   :";
+	postOrder(root);
+	system("pause");
+	return 0;
+}

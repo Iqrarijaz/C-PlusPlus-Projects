@@ -1,0 +1,26 @@
+#include<iostream>
+#include<conio.h>
+#include<string>
+#include<fstream>
+using namespace std;
+int main()
+{
+
+	ofstream file;
+	file.open("malik.txt");
+	file << "people let u down , Allah never does !";
+	file.close();
+	ifstream file1("malik.txt");
+	string line;
+      cout << endl;
+	file1.clear();
+	char ch;
+	file1.seekg(0, ios::beg);
+
+	while (!file1.eof())
+	{
+		file1.get(ch);
+		cout << ch<<"  ";
+	}
+	system("pause");
+}

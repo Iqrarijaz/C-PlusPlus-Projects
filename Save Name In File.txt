@@ -1,0 +1,31 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+int main()
+{
+	string name;
+	string age;
+	ofstream file;
+	ofstream outfile("mali.txt", ios::app);
+	file.open("mali.txt", ios::app);
+	if (file.is_open())
+	{
+		cout << "Enter your name"; cin >> name;
+		cout << endl;
+		outfile << endl << "name :" << name << endl;
+		cout << "enter your age ";
+		getline(cin, age);
+		cin >> age;
+		cout << endl;
+		outfile << "age :" << age << endl;
+		file.close();
+	}
+	else
+	{
+		cout << "Invalid ......";
+	}
+	system("pause");
+	return 0;
+}

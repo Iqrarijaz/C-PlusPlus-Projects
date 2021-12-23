@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+#include<conio.h>
+void Resjiter();
+using namespace std;
+int  mobilenumber = 0, pin = 0; string First , Last; char pass[4];
+
+
+int main()
+{
+	int ch;
+	do{
+		system("CLS"); // clear sreen
+		system("color F5"); // colour
+		int choice = 0;
+		cout << "                        *****WELCOME TO PAKISTAN RAILWAY***** ";
+		cout << "\n\tPRESS 1 TO REJISTER YOURSELF\t\t   PRESS 2 TO LOG IN  \n";
+		cin >> choice;
+		if (choice == 1)
+		{
+			cout << "\a";        //beep
+			system("CLS");
+			cout << "\t\t\t*****REJISTRATION FOR PAKISTAN RAILWAY*****\n";
+		}
+		else
+		if (choice == 2)
+		{
+			cout << "\a";
+			system("CLS");
+			cout << "\t\t\t*****LOG IN TO PAKISTAN RAILWAY*****\n";
+			
+		}
+		else
+		{
+			cout << "\nInvalid Choice.\n";
+		}
+	} while (ch == 2);
+	int Rejister();
+		
+}

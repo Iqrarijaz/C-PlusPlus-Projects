@@ -1,0 +1,43 @@
+liesence condition program
+#include<iostream>
+#include<string>
+using namespace std;
+void main()
+{
+	system("clr");
+	system("color f4");
+	string status, gender;
+	int age;
+	int chk;
+	do
+	{
+		chk = 1;
+
+		cout << "enter gender :";
+		cin >> gender;
+		cout << endl;
+		cout << "enter status: ";
+		cin >> status;
+		cout << "enter age";
+		cin >> age;
+		cout << endl;
+		if (gender == "male" && status == "unmarried"&& age > 30)
+		{
+			cout << "Congratulation ! tusan da liesence ban sakda\n";
+		}
+		if (gender == "female" && status == "unmarried"&& age > 25)
+		{
+			cout << "Congratulation ! tusan da liesence ban sakda\n";
+		}
+		if (status == "married")
+		{
+			cout << " tusan da veyh howaya hoya\n";
+		}
+		else
+		{
+			cout << "cycle chalao !\n";
+		}
+		chk = 0;
+	} while (chk == 0);
+	system("pause");
+}
